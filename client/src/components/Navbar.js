@@ -22,7 +22,7 @@ const Navbar = () => {
         ) : (
           <>
             <li><Link to="/login" className="navbar-button">Login</Link></li>
-            {/* <li><Link to="/register" className="navbar-button">Register</Link></li> */}
+            <li><Link to="/register" className="navbar-button">Register</Link></li>
           </>
         )}
       </ul>

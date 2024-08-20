@@ -1,5 +1,5 @@
 const express = require('express');
-const { getTestQuestions, startTest, submitTest, getTests } = require('../controllers/testController');
+const { getTestQuestions, startTest, submitTest, getTests, createTest } = require('../controllers/testController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
@@ -15,5 +15,8 @@ router.get('/start/:testId', authMiddleware, startTest);
 
 // Submit a test
 router.post('/submit/:testId', authMiddleware, submitTest);
+
+// Create a new test
+router.post('/create', authMiddleware, createTest);
 
 module.exports = router;
